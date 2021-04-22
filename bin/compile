@@ -86,22 +86,8 @@ message "-----> Dart cmd found at $DART_BIN"
 CAN_DART_RUN=`/app/dart-sdk/bin/dart --version`
 message "-----> Dart reports version: $CAN_DART_RUN"
 
-echo "CACHE DIR:"
-ls $CACHE_DIR
-echo "$CACHE_DIR
-
-echo "GIT DIR:"
-ls $GIT_DIR
-echo "$GIT_DIR
-
-cd $BUILD_DIR
-
-echo "BUILD DIR:"
-ls $BUILD_DIR
-echo "$BUILD_DIR
-
-echo "/app/dart-sdk/bin/pub global activate --source path $BUILD_DIR/vendors/aqueduct-3.3.0-b1/"
-/app/dart-sdk/bin/pub global activate --source path "$BUILD_DIR/vendors/aqueduct-3.3.0-b1/"
+# Activate vendor version of Aqueduct
+/app/dart-sdk/bin/pub global activate --source path $BUILD_DIR/vendors/aqueduct-3.3.0-b1/
 
 cd $BUILD_DIR
 
