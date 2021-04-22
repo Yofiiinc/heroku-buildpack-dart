@@ -103,7 +103,7 @@ for filename in `find . -name pubspec.yaml | grep -v dart-sdk | grep -v pub-cach
     for package in $DART_GLOBAL_PACKAGES
     do
         PACKAGE_ELEMENTS=(${package//@/ })
-        echo "PACKAGE_ELEMENTS: ${PACKAGE_ELEMENTS}"
+        printf '%s\n' "${PACKAGE_ELEMENTS[@]}"
         /app/dart-sdk/bin/pub global activate "${PACKAGE_ELEMENTS[0]}" "${PACKAGE_ELEMENTS[1]}"
     done
 done
