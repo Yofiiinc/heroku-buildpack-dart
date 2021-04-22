@@ -87,6 +87,7 @@ CAN_DART_RUN=`/app/dart-sdk/bin/dart --version`
 message "-----> Dart reports version: $CAN_DART_RUN"
 
 cd $BUILD_DIR
+ls $GIT_DIR
 ls $CACHE_DIR
 cp -r $CACHE_DIR/vendors/aqueduct-3.3.0-b1 $BUILD_DIR/vendors/aqueduct-3.3.0-b1
 
