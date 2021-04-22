@@ -4,7 +4,7 @@
 # fail fast
 set -e
 #set -x
-unset GIT_DIR
+# unset GIT_DIR
 
 function message {
   echo "$1"
@@ -86,11 +86,12 @@ message "-----> Dart cmd found at $DART_BIN"
 CAN_DART_RUN=`/app/dart-sdk/bin/dart --version`
 message "-----> Dart reports version: $CAN_DART_RUN"
 
-cd $BUILD_DIR
 ls $GIT_DIR
- 
+echo "$GIT_DIR
 echo "/app/dart-sdk/bin/pub global activate --source path $GIT_DIR/vendors/aqueduct-3.3.0-b1/"
 /app/dart-sdk/bin/pub global activate --source path "$GIT_DIR/vendors/aqueduct-3.3.0-b1/"
+
+cd $BUILD_DIR
 
 for filename in `find . -name pubspec.yaml | grep -v dart-sdk | grep -v pub-cache`; do
     pub_dir=`dirname $filename`
