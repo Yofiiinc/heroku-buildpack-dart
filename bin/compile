@@ -4,7 +4,7 @@
 # fail fast
 set -e
 #set -x
-# unset GIT_DIR
+unset GIT_DIR
 
 function message {
   echo "$1"
