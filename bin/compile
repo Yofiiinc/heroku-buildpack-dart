@@ -4,7 +4,7 @@
 # fail fast
 set -e
 #set -x
-unset GIT_DIR
+# unset GIT_DIR
 
 function message {
   echo "$1"
@@ -85,6 +85,10 @@ message "-----> Dart cmd found at $DART_BIN"
 
 CAN_DART_RUN=`/app/dart-sdk/bin/dart --version`
 message "-----> Dart reports version: $CAN_DART_RUN"
+
+echo "CACHE DIR:"
+ls $CACHE_DIR
+echo "$CACHE_DIR
 
 echo "GIT DIR:"
 ls $GIT_DIR
