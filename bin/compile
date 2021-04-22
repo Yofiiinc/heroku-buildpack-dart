@@ -103,11 +103,11 @@ for filename in `find . -name pubspec.yaml | grep -v dart-sdk | grep -v pub-cach
     #start pub from the /app folder to have correct symlink paths
     /app/dart-sdk/bin/pub get
 
-    for package in $DART_GLOBAL_PACKAGES
-    do
-        PACKAGE_ELEMENTS=(${package//@/ })
-        /app/dart-sdk/bin/pub global activate "${PACKAGE_ELEMENTS[0]}" "${PACKAGE_ELEMENTS[1]}"
-    done
+#     for package in $DART_GLOBAL_PACKAGES
+#     do
+#         PACKAGE_ELEMENTS=(${package//@/ })
+#         /app/dart-sdk/bin/pub global activate "${PACKAGE_ELEMENTS[0]}" "${PACKAGE_ELEMENTS[1]}"
+#     done
 done
 
 # I think heroku deletes all the contents of /app and replaces it with
