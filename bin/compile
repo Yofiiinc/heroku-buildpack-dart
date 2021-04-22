@@ -90,7 +90,7 @@ cd $BUILD_DIR
 ls $GIT_DIR
  
 echo "/app/dart-sdk/bin/pub global activate --source path $GIT_DIR/vendors/aqueduct-3.3.0-b1/"
-/app/dart-sdk/bin/pub global activate --source path $GIT_DIR/vendors/aqueduct-3.3.0-b1/
+/app/dart-sdk/bin/pub global activate --source path "$GIT_DIR/vendors/aqueduct-3.3.0-b1/"
 
 for filename in `find . -name pubspec.yaml | grep -v dart-sdk | grep -v pub-cache`; do
     pub_dir=`dirname $filename`
