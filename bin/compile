@@ -88,8 +88,14 @@ message "-----> Dart cmd found at $DART_BIN"
 CAN_DART_RUN=`/app/dart-sdk/bin/dart --version`
 message "-----> Dart reports version: $CAN_DART_RUN"
 
+echo "GIT PATH:"
 ls $GIT_PATH
 echo "$GIT_PATH
+
+echo "BUILD DIR:"
+ls $BUILD_DIR
+echo "$BUILD_DIR
+
 echo "/app/dart-sdk/bin/pub global activate --source path $GIT_PATH/vendors/aqueduct-3.3.0-b1/"
 /app/dart-sdk/bin/pub global activate --source path "$GIT_PATH/vendors/aqueduct-3.3.0-b1/"
 
