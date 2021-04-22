@@ -90,6 +90,8 @@ echo "GIT DIR:"
 ls $GIT_DIR
 echo "$GIT_DIR
 
+cd $BUILD_DIR
+
 echo "BUILD DIR:"
 ls $BUILD_DIR
 echo "$BUILD_DIR
