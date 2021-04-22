@@ -100,8 +100,8 @@ echo "BUILD DIR:"
 ls $BUILD_DIR
 echo "$BUILD_DIR
 
-echo "/app/dart-sdk/bin/pub global activate --source path $GIT_PATH/vendors/aqueduct-3.3.0-b1/"
-/app/dart-sdk/bin/pub global activate --source path "$GIT_PATH/vendors/aqueduct-3.3.0-b1/"
+echo "/app/dart-sdk/bin/pub global activate --source path $BUILD_DIR/vendors/aqueduct-3.3.0-b1/"
+/app/dart-sdk/bin/pub global activate --source path "$BUILD_DIR/vendors/aqueduct-3.3.0-b1/"
 
 cd $BUILD_DIR
 
