@@ -4,7 +4,9 @@
 # fail fast
 set -e
 #set -x
-# unset GIT_DIR
+
+GIT_PATH="$GIT_DIR"
+unset GIT_DIR
 
 function message {
   echo "$1"
@@ -86,10 +88,10 @@ message "-----> Dart cmd found at $DART_BIN"
 CAN_DART_RUN=`/app/dart-sdk/bin/dart --version`
 message "-----> Dart reports version: $CAN_DART_RUN"
 
-ls $GIT_DIR
-echo "$GIT_DIR
-echo "/app/dart-sdk/bin/pub global activate --source path $GIT_DIR/vendors/aqueduct-3.3.0-b1/"
-/app/dart-sdk/bin/pub global activate --source path "$GIT_DIR/vendors/aqueduct-3.3.0-b1/"
+ls $GIT_PATH
+echo "$GIT_PATH
+echo "/app/dart-sdk/bin/pub global activate --source path $GIT_PATH/vendors/aqueduct-3.3.0-b1/"
+/app/dart-sdk/bin/pub global activate --source path "$GIT_PATH/vendors/aqueduct-3.3.0-b1/"
 
 cd $BUILD_DIR
 
