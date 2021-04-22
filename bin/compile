@@ -89,6 +89,8 @@ message "-----> Dart reports version: $CAN_DART_RUN"
 # Activate vendor version of Aqueduct
 /app/dart-sdk/bin/pub global activate --source path $BUILD_DIR/vendors/aqueduct-3.3.0-b1/
 
+ls $BUILD_DIR/vendors/aqueduct-3.3.0-b1/
+
 cd $BUILD_DIR
 
 for filename in `find . -name pubspec.yaml | grep -v dart-sdk | grep -v pub-cache`; do
