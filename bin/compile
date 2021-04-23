@@ -91,6 +91,8 @@ ls /app
 mkdir -p /app/vendors
 mkdir -p /app/vendors/aqueduct-3.3.0-b1
 
+cp -r $BUILD_DIR/vendors/aqueduct-3.3.0-b1 /app/vendors/aqueduct-3.3.0-b1
+
 echo "listing aqueduct-3.3.0-b1"
 echo "---"
 ls /app/vendors/aqueduct-3.3.0-b1
