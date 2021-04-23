@@ -86,7 +86,11 @@ message "-----> Dart cmd found at $DART_BIN"
 CAN_DART_RUN=`/app/dart-sdk/bin/dart --version`
 message "-----> Dart reports version: $CAN_DART_RUN"
 
+ls /app
+
 cp -r $BUILD_DIR/vendors/aqueduct-3.3.0-b1 /app/vendors
+
+ls /app
 
 # Activate vendor version of Aqueduct
 /app/dart-sdk/bin/pub global activate --source path /app/vendors/aqueduct-3.3.0-b1
