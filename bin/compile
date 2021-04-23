@@ -91,19 +91,12 @@ ls /app
 mkdir -p /app/vendors
 mkdir -p /app/vendors/aqueduct-3.3.0-b1
 
-echo "copying aqueduct-3.3.0-b1"
-cp -r $BUILD_DIR/vendors/aqueduct-3.3.0-b1 /app/vendors
-
-echo "listing /app"
-ls /app
-
 echo "listing aqueduct-3.3.0-b1"
+echo "---"
 ls /app/vendors/aqueduct-3.3.0-b1
 
 # Activate vendor version of Aqueduct
 /app/dart-sdk/bin/pub global activate --source path /app/vendors/aqueduct-3.3.0-b1
-
-
 
 cd $BUILD_DIR
 
