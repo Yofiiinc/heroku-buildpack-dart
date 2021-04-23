@@ -88,6 +88,7 @@ message "-----> Dart reports version: $CAN_DART_RUN"
 
 ls /app
 
+mkdir /app/vendors
 mkdir /app/vendors/aqueduct-3.3.0-b1
 cp -r $BUILD_DIR/vendors/aqueduct-3.3.0-b1 /app/vendors/aqueduct-3.3.0-b1
 
