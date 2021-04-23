@@ -92,7 +92,7 @@ mkdir /app/vendors
 mkdir /app/vendors/aqueduct-3.3.0-b1
 cp -r $BUILD_DIR/vendors/aqueduct-3.3.0-b1 /app/vendors/aqueduct-3.3.0-b1
 
-ls /app/vendors
+ls /app/vendors/aqueduct-3.3.0-b1
 
 # Activate vendor version of Aqueduct
 /app/dart-sdk/bin/pub global activate --source path /app/vendors/aqueduct-3.3.0-b1
